@@ -10,6 +10,13 @@ package exercicios.numero4;
 public class itemC {
 	
 	public static void main(String[] args) {
+		int Num_a = 9;
+		if (Num_a != 3 | false){/*! significa não, no caso é não é igual a 3(!=) e
+depois comparando isso com falso, | false- compara com que está */
+			System.out.println("é diferente de 3");
+		} else {
+			System.out.println("é igual a 3");
+		}
 		
 	}
 }

@@ -6,6 +6,6 @@ public class itemA {// a.	somar duas variï¿½veis int e imprimir os valores
 			int numeroA = 900000000;
 			int numeroB = 900000000;
 			int soma = numeroA + numeroB;
-				System.out.println("A soma dos nï¿½meros ï¿½: " + soma );
+				System.out.println("A soma dos numeros é: " + soma );
 		}
 }

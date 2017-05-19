@@ -6,6 +6,6 @@ public class itemC {//c.	somar duas variï¿½veis long e imprimir os valores
 		long numberA = 10005000l;
 		long numberB = 10005000l;
 		long soma = numberA + numberB;
-			System.out.println("soma da long ï¿½: " + soma);
+			System.out.println("soma da long é: " + soma);
 	}
 }

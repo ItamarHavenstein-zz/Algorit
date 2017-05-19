@@ -5,7 +5,7 @@ public class itemG {//g. multiplicar uma vari√°vel double com uma vari√°vel floa
 	public static void main(String[] args) {
 		double Num_a = 0.5d;
 		float Num_b = 0.05f;
-		float mult =(float)( Num_a * Num_b);
+		double mult = Num_a * Num_b;//precisa ser usado o double ao inves do float pois o double e maior do que o float
 			System.out.println("A resposta da multiplicaÁ„o È: " + mult);
 			
 	}

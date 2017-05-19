@@ -3,6 +3,8 @@ package exemplos.condicao;
 public class CondicaoQtdMeses {
 	
 	public static void main(String[] args) {
+		
+		
 		int _qtdMeses = 12;
 		double soma = 100;
 		int aux = 4;

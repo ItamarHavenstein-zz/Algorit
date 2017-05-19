@@ -10,7 +10,7 @@ System.out.println(â€œSe Ã© verdadeiroâ€�);
 public class itemB {
 	
 	public static void main (String[] args) {
-		boolean Vlogico = false;
+		boolean Vlogico = true;
 		if(Vlogico)  {
 			System.out.println("Se é verdadeiro");
 		} else {
