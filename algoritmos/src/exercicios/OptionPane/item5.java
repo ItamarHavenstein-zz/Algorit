@@ -5,4 +5,13 @@ import javax.swing.JOptionPane;
 
 public class item5 {
 
+	public static void main(String[] args) {
+		int Num_a = Integer.parseInt(JOptionPane.showInputDialog("Digite ate que numero queira que apareça"));
+	
+		for(int a = 0; a<= Num_a ; a++ ){
+		  if (a < Num_a);{
+			  System.out.println("numeros: " + a);
+	}
+}
+}
 }
