@@ -11,8 +11,13 @@ package exercicios.OptionPane;
     I
     J*/
 
-import javax.swing.JOptionPane;
+
 
 public class item18 {
 
-}
+	public static void main(String[] args) {
+		System.out.println("A\nB\nC\nD\nE\nF\nG\nH\nI\nJ");
+			
+		}
+	}
+

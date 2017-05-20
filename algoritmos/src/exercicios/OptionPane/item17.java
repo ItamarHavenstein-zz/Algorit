@@ -11,8 +11,16 @@ package exercicios.OptionPane;
 9_2
 10_1*/
 
-import javax.swing.JOptionPane;
+
 
 public class item17 {
+	
+	public static void main(String[] args) {
+		int b =11;
+		for(int a =0; a <=10; a++)  {
+			if(b>=0)b--;
+				System.out.println(+a+ "_"+b);
+			}
+		}
+	}
 
-}

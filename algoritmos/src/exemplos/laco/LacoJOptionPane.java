@@ -2,7 +2,7 @@ package exemplos.laco;
 
 import javax.swing.JOptionPane;//biblioteca da instrucao
 
-public class LacoJOptionPane {
+public class LacoJOptionPane {//Integer.parseInt() transforma valor para Int
 	public static void main(String[] args) {
 		int _qtdMeses = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de meses"));
 		int _valorMensal = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor Mensal:"));
