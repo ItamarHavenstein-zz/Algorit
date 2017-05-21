@@ -2,7 +2,7 @@ package exemplos.laco;
 
 import java.util.Random;
 
-public class LacoMatriz {
+/*public class LacoMatriz {
 	
 	public static void mostrarMatriz(int m[][]){
 		    int linha, coluna;
@@ -12,16 +12,16 @@ public class LacoMatriz {
 		      } 
 		       System.out.println("  ");
 		     }
-/*int cont;
+int cont;
 int mudar;
-//Mostrando a Matriz Original, "chamando" a função "mostrarMatriz".   
+//Mostrando a Matriz Original, "chamando" a funï¿½ï¿½o "mostrarMatriz".   
 System.out.println("Matriz Original:");
  mostrarMatriz(matriz);  
 }}import java.util.Random;
 public class Ajuda{
 	  public static void main(String[] args){
 	  Random gerador = new Random();     
-	//Variáveis necessárias para o Algoritmo:   
+	//Variï¿½veis necessï¿½rias para o Algoritmo:   
 	int[][] matriz = {
 	{8,3,5,4,1,6,9,2,7},
 	{2,9,6,8,5,7,4,3,1},
@@ -35,6 +35,6 @@ public class Ajuda{
 	};
 	  int cont;
 	  int mudar;
-	//Mostrando a Matriz Original, "chamando" a função "mostrarMatriz".   
+	//Mostrando a Matriz Original, "chamando" a funï¿½ï¿½o "mostrarMatriz".   
 	    System.out.println("Matriz Original:");
 	     mostrarMatriz(matriz);   */

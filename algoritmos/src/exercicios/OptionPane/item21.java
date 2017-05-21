@@ -8,15 +8,17 @@ package exercicios.OptionPane;
 1 1 1 1 1 1  */
 
 import javax.swing.JOptionPane;
-//import java.util.Random;
+
 
 public class item21 {
 
 	public static void main(String[] args) {
 		int N_linhas = Integer.parseInt(JOptionPane.showInputDialog("Quantas linhas:"));
-		for(int b = 1; b<= N_linhas; b++){
-			 for(int c = 1; b >=c; c=1)
-			System.out.println(c);
+		 for(int i = 0; i < N_linhas; i++) {
+			 for(int j = 0; j <= i; j++) { 
+				 System.out.print("1");}
+			 System.out.println(); 
+			 }
+		
 		}
-	}
 }
