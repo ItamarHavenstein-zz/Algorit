@@ -15,8 +15,8 @@ public class item21 {
 	public static void main(String[] args) {
 		int N_linhas = Integer.parseInt(JOptionPane.showInputDialog("Quantas linhas:"));
 		for(int b = 1; b<= N_linhas; b++){
-			
-			System.out.println(b);
+			 for(int c = 1; b >=c; c=1)
+			System.out.println(c);
 		}
 	}
 }
