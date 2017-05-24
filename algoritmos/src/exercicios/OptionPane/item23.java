@@ -16,4 +16,18 @@ import javax.swing.JOptionPane;
 
 public class item23 {
 
+	public static void main(String[] args) {
+		
+		int N_linhas = Integer.parseInt(JOptionPane.showInputDialog("Quantas linhas:"));
+		
+		 for(int i = 0; i <= N_linhas; N_linhas--) {
+			 for(int j = 1; j <= N_linhas; j++) { 
+			 if(N_linhas<10){
+			    	 System.out.print(" 0" +N_linhas);
+			 } else{
+				 System.out.print(" " +N_linhas);
+			 }}
+			 		System.out.println(); 
+			  }
+	}
 }

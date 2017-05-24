@@ -19,16 +19,17 @@ public class item22 {
 	public static void main(String[] args) {
 		
 		int N_linhas = Integer.parseInt(JOptionPane.showInputDialog("Quantas linhas:"));
-		 for(int i = 0; i < N_linhas; i++) {
-			 for(int j = 0; j <= i; j++) { 
-			    
-				 System.out.print("01 ");}
+		
+		 for(int i = 1; i <= N_linhas; i++) {
+			 for(int j = 1; j <= i; j++) { 
+			 if(i<10){
+			    	 System.out.print(" 0"+i);
+			 } else{
+				 System.out.print(" " +i);
+			 }}
 			 		System.out.println(); 
-		 	
-		 	  	
-		 }
-	
-		 }
+			  }
+		  }
 	}
 
 
