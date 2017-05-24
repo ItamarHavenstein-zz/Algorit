@@ -27,6 +27,13 @@ u. 21 = V
 v. 22 = X
 w. 23 = Z*/
 
+import java.util.Scanner;
+
 public class item16 {// usar (case)
 
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		
+	}
 }

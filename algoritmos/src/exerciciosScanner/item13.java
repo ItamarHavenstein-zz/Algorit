@@ -58,6 +58,16 @@ public class item13 {
 				System.out.println("3-True");
 			}else {
 				System.out.println("3-False");
+			}if((Num_1+Num_2+Num_3+Num_4)>10){
+				System.out.println("4-False");
+			}else{
+				System.out.println("4-True");
+			}if(Num_1>10||Num_3>0||(Num_2+Num_4) == 0){
+				System.out.println("5-False");
+			}else{
+				System.out.println("5-True");
 			}
+				
+			
 		scanner.close();
 	}}

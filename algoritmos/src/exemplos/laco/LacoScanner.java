@@ -1,4 +1,12 @@
 package exemplos.laco;
+/*      a seguir temos mais sobrea biblioteca do scanner para cada tipo de variavel.
+        float numF = sc.nextFloat();
+		int num1 = sc.nextInt();
+		byte byte1 = sc.nextByte();
+		long lg1 = sc.nextLong();
+		boolean b1 = sc.nextBoolean();
+		double num2 = sc.nextDouble();
+		String nome = sc.nextLine();*/
 
 import java.util.Scanner;//biblioteca da instrucao
 

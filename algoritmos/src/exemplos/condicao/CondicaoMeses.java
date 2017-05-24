@@ -3,13 +3,13 @@ package exemplos.condicao;
 public class CondicaoMeses {
 
 		public static void main(String[] args) {
-			int mes = 4;
+			int mes = 4; 
 					switch(mes){
 					case 1: System.out.println("Janeiro");
 							break;
 					case 2: System.out.println("Fevereiro");
 							break;
-					case 3: System.out.println("Março");
+					case 3: System.out.println("Marï¿½o");
 							break;
 					case 4: System.out.println("Abril");
 							break;
@@ -29,7 +29,7 @@ public class CondicaoMeses {
 							break;
 					case 12: System.out.println("Dezembro");
 							break;
-						default: System.out.println("Mês inexistente.");
+						default: System.out.println("Mï¿½s inexistente.");
 							break;
 					}
 
