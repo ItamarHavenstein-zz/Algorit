@@ -11,6 +11,14 @@ texto = outroTexto + “Ferneda”;
 	ViniciusFernedaFerneda*/
 
 
-public class item23 {
+public class item23 {/*O texto não está condizente, pois a variavel que é impresa e outrotexto,
+ então o texto impreso ficará ViníciusFerneda, se no caso fosse texto a variavel impresa ai sim ficaria 
+ ViníciusFernedaFerneda*/
 
+	public static void main(String[] args) {
+		String texto = "Vinícius";
+		String outroTexto = texto + "Ferneda";
+	texto = outroTexto + "Ferneda";
+		System.out.println(outroTexto);
+	}
 }

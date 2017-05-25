@@ -27,13 +27,24 @@ u. 21 = V
 v. 22 = X
 w. 23 = Z*/
 
-import java.util.Scanner;
+import java.util.Scanner;// usar o split fica dentro da string
 
 public class item16 {// usar (case)
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
+		String Text;
+		System.out.println("Digite quantos numeros quiser:");
+		Text = scanner.next();
 		
-	}
-}
+		
+			
+		
+			
+			
+		
+		scanner.close();
+	}}
+	
+

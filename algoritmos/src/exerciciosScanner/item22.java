@@ -8,4 +8,15 @@ e imprima ambas as variáveis novamente. Verifique o que aconteceu.*/
 
 public class item22 {
 
+	public static void main(String[] args) {
+		boolean test = true;
+		boolean outrotest = false;
+		System.out.println(test+ " "+outrotest);
+		outrotest = test;
+		System.out.println(test+ " "+outrotest);
+		test = false;
+		System.out.println(test+ " "+outrotest);
+		
+		
+	}
 }
