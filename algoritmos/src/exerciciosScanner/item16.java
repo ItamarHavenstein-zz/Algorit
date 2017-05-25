@@ -29,7 +29,7 @@ w. 23 = Z*/
 
 import java.util.Scanner;// usar o split fica dentro da string
 
-public class item16 {// usar (case)
+public class item16 {// usar array
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
