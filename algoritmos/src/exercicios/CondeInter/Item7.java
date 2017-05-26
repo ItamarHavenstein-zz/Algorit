@@ -7,23 +7,46 @@ d. Caso o usuário digitou o operador +,some os dois números e imprima o result
 e. Caso o usuário digitou o operador -,subtraia os dois números e imprima o resultado “Valor da subtração: <resultado>”.
 f. Caso o usuário digitou o operador /,divida os dois números e imprima o resultado “Valor da divisão: <resultado>”.
 g. Caso o usuário digitou o operador *,multiplique os dois números e imprima o resultado “Valor da multiplicação: <resultado>”.
-9. Mariazinha quer sair com amigas no domingo a tarde no shopping. 
-Só que ela não sabe que roupa ela vai usar ainda, por que ela não viu o jornal do clima na tv.
- Desta na hora de sair ela vai olhar para fora da janela e ver o tempo para verificar qual roupa ela usará. 
- Contudo a Mariazinha já nos disse o que ela usará em cada clima e temperatura. Desta forma, 
- escreva um algoritmo que verifique as condições do tempo (clima e temperatura) e 
- imprima no console qual a roupa que a Mariazinha escolheu para usar.
-a. Se estiver sol ela usuário blusa
-b. Se estiver sol e a temperatura estiver acima de 30° ela usará saia
-c. Se estiver sol e a temperatura estiver abaixo ou igual a 30° e maior ou igual a 23° ela usará shorts.
-d. Se estiver sol e a temperatura estiver abaixo de 23ª graus ela usuário calça jeans.
-e. Se estiver nublado e a temperatura estiver mais que 25° graus ela usará vestido.
-f. Se estiver nublado e a temperatura estiver menor ou igual a 25° ela usará calça de moletom e sobretudo. 
-g. Se estiver chovendo ela usará bota e calça  jean
-h. Se estiver chovendo e a temperatura for menor ou igual a 10° ela usará blusa e um casaco de lã.
-i. Se estiver chovendo e a temperatura for maior que 10° e menor que 25° ela usará camisete. 
-j. Se estiver chovendo e a temperatura for maior ou igual a 25° ela usará uma blusa regata
-k. Caso contrário ela vai ficar em casa*/
+*/
+
+import java.util.Scanner;
+
 public class Item7 {
 
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int num_1;
+		System.out.println("Digite um numero inteiro");
+		num_1 = scanner.nextInt();
+		
+		String sinal;
+		System.out.println("Digite um operador matemático(+,-,/,*)");
+		sinal = scanner.next();
+		
+		int num_2;
+		System.out.println("Digite outro numero inteiro");
+		num_2 = scanner.nextInt();
+		
+		double num_3 = num_1;
+		double num_4 = num_2;
+		double div = num_3/num_4;
+		
+		if(sinal.equals("+")){
+			System.out.println("Resultado da soma: "+(num_1+num_2));
+		}else{
+			if(sinal.equals("-")){
+				System.out.println("Resultado da subtração: "+(num_1-num_2));
+			}else{
+				if(sinal.equals("/")){
+					System.out.println("Resultado da divisão: "+div);
+				}else{
+					if(sinal.equals("*")){
+						System.out.println("Resultado da multiplicação: "+(num_1*num_2));
+					}
+				}
+			}
+		}
+		scanner.close();
+	}
 }
