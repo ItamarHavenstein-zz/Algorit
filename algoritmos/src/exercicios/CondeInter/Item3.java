@@ -5,11 +5,29 @@ package exercicios.CondeInter;
  * Após o teste da da condição do if, imprima o resultado da multiplicação.*/
 
 //import javax.swing.JOptionPane;
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Item3 {
 
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 		
+		int Num_1;
+		System.out.print("Digite um numero: ");
+		Num_1 = scanner.nextInt();
+		
+		int Num_2;
+		System.out.print("Digite outro numero: ");
+		Num_2 = scanner.nextInt();
+		
+		int Mult = Num_1 * Num_2;
+		if(Mult == 0){
+			System.out.println("O resultado é zero");
+		}else{if(Mult % 5 ==0){
+			System.out.println("O resultado é multiplo de 5");
+		}else{
+			System.out.println("O resultado não foi o esperado");
+		}
+		scanner.close();
 	}
-}
+}}
