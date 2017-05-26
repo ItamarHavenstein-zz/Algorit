@@ -40,7 +40,7 @@ public class Item6{
 			String bairro_3 = "Garcia";
 			String bairro_4 ="Belchior";
 			String bairro_5 = "Bela Vista";
-			if(Cidade.equals(citi_1) && Bairro.equals(bairro_1) ){
+			if(Cidade.equals(citi_1) && Bairro.equals(bairro_1)){
 				System.out.println("Você se atrasará para o trabalho!");
 			}else{if(Cidade.equals(citi_1)&& Bairro.equals(bairro_2)){
 				System.out.println("Você se atrasará muito mais para o trabalho!");
@@ -52,7 +52,7 @@ public class Item6{
 				System.out.println("Pegue carona com quem vêem de Gaspar, economiza gasolina!");
 			}else{
 				System.out.println("Não está em nossa base de dados");
-			
+			}}}}}
 			String pergt;
 			System.out.println("Você concorda com o que eu disse(verdadeiro ou falso)");
 			pergt = scanner.nextLine();
@@ -60,15 +60,15 @@ public class Item6{
 				System.out.println("Show de bola");
 			}else{
 				System.out.println("Ok, problema é seu!");
-			}
-			}
+			
+			
 			scanner.close();
 		}
-		}
+		
 	}
-	}
+
 }
-}
+
 			
 
 
