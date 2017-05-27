@@ -20,7 +20,8 @@ caso contrário true.
 e. Imprima false se o primeiro número é maior que 10 ou o terceiro número for maior que 0, ou o 
 segundo número mais o quarto número for igual a 0. Caso contrário true.*/
 
-import java.util.Scanner;
+import java.util.Scanner;//arrumar
+
 
 public class item13 {
 
