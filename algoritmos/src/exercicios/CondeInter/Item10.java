@@ -18,21 +18,21 @@ public class Item10 {
 		int b;
 		int c;
 		
-		if(num_1>num_2){
+		if(num_1>num_2){//numero 1 maior que numero 2 = maior_1
 			maior_1 = num_1;
 			menor_1 = num_2;
 		}else{
 			maior_1 = num_2;
 			menor_1 = num_1;
 		}
-		if(maior_1 > num_3){
+		if(maior_1 > num_3){//numero maior_1 maior que numero 3= maior_2
 			maior_2 = maior_1;
 			menor_2 = num_3;
 		}else{
 			maior_2 = num_3;
 			menor_2 = maior_1;
 		}
-		if(menor_1 > menor_2){
+		if(menor_1 > menor_2){//numero menor_1 menor que numero menor_2 = b e c
 			b = menor_1;
 			c = menor_2;
 		}else{

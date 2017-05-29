@@ -13,14 +13,27 @@ public class Item14 {
 		String nome_2 =JOptionPane.showInputDialog("Digite outro nome");
 		int idade_2 = Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade"));
 		
-		int a;
-		int b;
+	    boolean a = false;
+	    boolean b = false;
 		
 		if(idade_1 > idade_2){
-			a = idade_1; 
+		  a	= true; 
 		}else{
-			b = idade_2;
+			b=true;
 		}
+		Integer.toString(idade_1);
+		Integer.toString(idade_2);
+		String maisvelho = null;
+		if( a == true){
+		maisvelho = "Pessoa mais velha "+nome_1 +" "+ idade_1+ " mais novo " +nome_2 +" "+ idade_2;
+		}else{
+			if(b==true){
+				maisvelho= "Pessoa mais velha "+nome_2 +" "+idade_2+" mais novo "+nome_1+" "+idade_1;
+			}
+		}
+		System.out.println(maisvelho);
+	  
+	    
 		
 	}
 }
