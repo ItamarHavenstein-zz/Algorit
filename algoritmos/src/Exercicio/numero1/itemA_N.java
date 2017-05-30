@@ -1,4 +1,4 @@
-package exercicio.numero1;
+package Exercicio.numero1;
 
 public class itemA_N {//1. Assinale a(s) opÃ§Ã£o (Ãµes) incorretas e escreva da forma correta:
 	//a. int numero = 1;correto
