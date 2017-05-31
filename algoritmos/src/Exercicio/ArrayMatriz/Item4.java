@@ -9,10 +9,10 @@ public class Item4 {
 		numero[1]=9;
 		numero[2]=8;
 		numero[3]=7;
-		int a=0;
-		for(int x : numero)
-			a++;
-		System.out.println("Existe "+a+" posições");
+		int a1=0;
+		for(int a =0 ; a<= numero.length;a++)
+		a1++;
+		System.out.println("Existe "+a1+" posições");
 		
 		  
 	}
