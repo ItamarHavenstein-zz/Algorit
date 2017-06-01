@@ -8,6 +8,16 @@ public static void main(String[] args) {
 	tf[0]=true;
 	tf[1]=false;
 	tf[2]=true;
-	//for()
+	int b = 0;
+	for(int a = 0; a <tf.length;a++){
+		if(tf[a] | true){
+			b++;
+		}
+	}
+	if (b ==3){
+		System.out.println("1");
+	}else {
+		System.out.println("2");
+	}
 }
 }

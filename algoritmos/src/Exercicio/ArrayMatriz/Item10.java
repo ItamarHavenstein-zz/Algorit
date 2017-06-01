@@ -12,9 +12,13 @@ public static void main(String[] args) {
 	num[3]=7;
 	num[4]=9;
 	num[5]=11;
-	
+	for(int a =0;a<num.length;a++){
+		if(a < 5){
+			System.out.println(num[a]);
+		}
+	}
 		
-	System.out.println();
+	
 		
 	
 }

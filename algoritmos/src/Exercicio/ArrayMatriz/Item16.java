@@ -5,5 +5,25 @@ package Exercicio.ArrayMatriz;
  *  array[i] == null). Imprimir o array para verificar se o algoritmo funcionou. Fazer o 
  *  exercício utilizando for ou while.*/
 public class Item16 {
-
+public static void main(String[] args) {
+	char[] caract = new char[10];
+	caract[0]= '2';
+	caract[1]='4';
+	caract[2]='5';
+	caract[3]='7';
+    caract[5]='A';
+	caract[6]='B';
+	caract[7]='C';
+	caract[9]='D';
+	for(int  a = 0; a<caract.length;a++)
+	System.out.println(caract[a]);
+	for(int a =0;a<caract.length;a++){
+		if(caract[a] == 0){
+			caract[a]= 'W';
+		}
+		}
+	System.out.println("Segunda lista\n");
+	for(int a =0;a<caract.length;a++)
+	System.out.println(caract[a]);
+}
 }
