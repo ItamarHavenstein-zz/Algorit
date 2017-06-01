@@ -18,11 +18,27 @@ public static void main(String[] args) {
 	for(int d=0;d<5;d++){
 		System.out.println(cresc[d]+" "+descr[d]);
 	}
-	for(int e = 0;e<4;e++){
-		for(int f = 4;f>0;f--){
+	for(int e = 0;e<5;e++){
+		for(int f = 4;f>=0;f--){
 			if((cresc[e]==1)&&(descr[f]==1)){
 				
-				System.out.println("\nArray cresc "+cresc+" e o array descr "+descr+" tem valor 1");
+				System.out.println("\nArray cresc "+e+" e o array descr "+f+" tem valor 1");
+			}else{
+				if((cresc[e]==2)&&(descr[f]==2)){
+					System.out.println("\nArray cresc "+e+" e o array descr "+f+" tem valor 2");
+				}else{
+					if((cresc[e]==3)&&(descr[f]==3)){
+						System.out.println("\nArray cresc "+e+" e o array descr "+f+" tem valor 3");
+					}else{
+						if((cresc[e]==4)&&(descr[f]==4)){
+							System.out.println("\nArray cresc "+e+" e o array descr "+f+" tem valor 4");
+						}else{
+							if((cresc[e]==5)&&(descr[f]==5)){
+								System.out.println("\nArray cresc "+e+" e o array descr "+f+" tem valor 5");
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -4,5 +4,7 @@ package Exercicio.ArrayMatriz;
  *  Percorrer o array de char, e armazenar em uma String, para formar o seguinte texto, “esta acabando a aula”.
  *   Imprimir este texto no final com o valor da variável String.*/
 public class Item24 {
+	public static void main(String[] args) {
+	}
 
 }

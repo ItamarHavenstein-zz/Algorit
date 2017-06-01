@@ -4,5 +4,7 @@ package exercicios.Interadores;
  *  ou múltiplos de 10 seguindo o exemplo da mensagem (Este número é múltiplo de 10: <número>). 
  *  Alterar o <número> para o valor da variável do contador.*/
 public class Item7 {
-
+public static void main(String[] args) {
+	
+}
 }
