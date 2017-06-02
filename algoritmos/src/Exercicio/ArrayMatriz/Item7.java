@@ -20,7 +20,7 @@ public class Item7 {
 	    	System.out.println("b)= "+letras[j]);}
 	    System.out.println();
 	    for(int j=5;j>=0;j--)
-	    if(letras[j] != letras[2]){
+	    if(letras[j] != "C"){
 	    	System.out.println("c)= "+letras[j]);
 	    }
 	    

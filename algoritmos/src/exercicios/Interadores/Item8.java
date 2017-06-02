@@ -7,5 +7,7 @@ c. 0, 2, 4, 6, 8, 10
 d. 10, 7, 4, 1
 e. 0,1,3,6,10,15,21,28*/
 public class Item8 {
-
+public static void main(String[] args) {
+	
+}
 }

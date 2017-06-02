@@ -5,6 +5,13 @@ package exercicios.Interadores;
  *  Alterar o <número> para o valor da variável do contador.*/
 public class Item7 {
 public static void main(String[] args) {
-	
+	for(int aux=10;aux<=20;aux++){
+		if(aux%5==0){
+			System.out.println("Este numero é múltiplo de 5: "+aux);}
+		if(aux%10==0){
+			System.out.println("Este numero é múltiplo de 10: "+aux);
+			}
+		}
+	}
 }
-}
+
