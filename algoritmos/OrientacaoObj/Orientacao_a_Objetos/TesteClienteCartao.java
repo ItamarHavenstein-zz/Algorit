@@ -6,10 +6,10 @@ import java.text.SimpleDateFormat;
 public class TesteClienteCartao {
 	
 	public static void main(String[] args) throws ParseException  {
-		SimpleDateFormat sdf = new SimpleDateFormat ();
+		SimpleDateFormat sdf = new SimpleDateFormat ("dd/mm/yyyy");//serve para formatar a forma que o salario sera apresentado no console
 		CartaoDeCredito cre = new CartaoDeCredito();
 		ClientesBanco cli = new ClientesBanco();
-		cre.cliente = cli;
+		cre.cliente = cli;//vincular o cartao ao cliente
 		
 		cre.cliente.codigoClientes = 1;
 		cre.cliente.nomeClientes = "Paulo";

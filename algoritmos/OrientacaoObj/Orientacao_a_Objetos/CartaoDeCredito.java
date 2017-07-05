@@ -6,4 +6,6 @@ public class CartaoDeCredito {
 	String numeroCartao;
 	Date validadeCartao;
 	ClientesBanco cliente;
+	
+	
 }
