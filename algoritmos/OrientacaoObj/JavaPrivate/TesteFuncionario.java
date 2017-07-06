@@ -1,4 +1,4 @@
-package Orientacao_a_Objetos;
+package JavaPrivate;
 
 import java.text.DecimalFormat;
 

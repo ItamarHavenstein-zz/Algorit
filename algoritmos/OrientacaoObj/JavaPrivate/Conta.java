@@ -1,4 +1,4 @@
-package Orientacao_a_Objetos;
+package JavaPrivate;
 
 import java.text.DecimalFormat;
 
@@ -6,11 +6,35 @@ public class Conta {
 	//para utilizar onde haverá valores de saldo,limite transferencia e etc.
 	DecimalFormat df = new DecimalFormat("#0.00");
 	
-	String numeroConta;
-	double saldoConta;
-	double limiteConta = 100.00d;
-	AgenciaBanco numero;
+	private String numeroConta;
+	private double saldoConta;
+	private double limiteConta = 100.00d;
+	private AgenciaBanco numero;
 	
+	public String getNumeroConta() {
+		return numeroConta;
+	}
+	public void setNumeroConta(String numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+	public double getSaldoConta() {
+		return saldoConta;
+	}
+	public void setSaldoConta(double saldoConta) {
+		this.saldoConta = saldoConta;
+	}
+	public double getLimiteConta() {
+		return limiteConta;
+	}
+	public void setLimiteConta(double limiteConta) {
+		this.limiteConta = limiteConta;
+	}
+	public AgenciaBanco getNumero() {
+		return numero;
+	}
+	public void setNumero(AgenciaBanco numero) {
+		this.numero = numero;
+	}
 	//metodo
 	public void deposita (double valor){
 		this.saldoConta += valor;
@@ -25,7 +49,7 @@ public class Conta {
 		extrato += "\n Numero da Conta: "+this.numeroConta;
 		extrato += "\n Saldo da conta: "+df.format(this.saldoConta)+"R$";
 		extrato += "\n Limite da conta: "+df.format(this.limiteConta)+"R$";
-		extrato += "\n Numero da agência: "+this.numero.numeroAgencia;
+		extrato += "\n Numero da agência: "+this.numero.getNumeroAgencia();
 		return extrato;
 	}
 	//metodo

@@ -1,11 +1,27 @@
-package Orientacao_a_Objetos;
+package JavaPrivate;
 
 import java.text.DecimalFormat;
 
 public class FuncionarioEscola {
-	String nomeFun;
-	double salarioFun;
+	private String nomeFun;
+	private double salarioFun;
 	
+	public String getNomeFun() {
+		return nomeFun;
+	}
+
+	public void setNomeFun(String nomeFun) {
+		this.nomeFun = nomeFun;
+	}
+
+	public double getSalarioFun() {
+		return salarioFun;
+	}
+
+	public void setSalarioFun(double salarioFun) {
+		this.salarioFun = salarioFun;
+	}
+
 	// construtor para aumento de salario
 	void aumento (double valor){
 		this.salarioFun += valor;

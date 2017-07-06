@@ -1,4 +1,4 @@
-package Orientacao_a_Objetos;
+package JavaPrivate;
 
 import java.text.DecimalFormat;
 
@@ -11,13 +11,13 @@ public class TesteAgenciaConta {
 		AgenciaBanco agencia = new AgenciaBanco(1234);
 
 		Conta conta = new Conta("123456",123.34d);//cria a conta utilizando o construtor que criamos na classe Conta
-		conta.numero = agencia;//vincula conta com a agenciaBanco
+		conta.setNumero(agencia);// = agencia;//vincula conta com a agenciaBanco
 		/*não é mais preciso colocar o comando a seguir pois como criamos o construtor inserimos esse valor quando criamos a agenciaBanco 
 		 * no inicio do programa*/
 		//conta.numero.numeroAgencia = 12534;
 		
-		System.out.println("O numero da conta "+conta.numeroConta+" da agência "
-				+conta.numero.numeroAgencia+" tem saldo de "+df.format(conta.saldoConta)+".");
+		System.out.println("O numero da conta "+conta.getNumeroConta()+" da agência "
+				+conta.getNumero()+" tem saldo de "+df.format(conta.getSaldoConta())+".");
 		
 	}
 }

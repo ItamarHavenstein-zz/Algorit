@@ -1,16 +1,26 @@
-package Orientacao_a_Objetos;
+package Static;
 
 import java.text.DecimalFormat;
+
+import Orientacao_a_Objetos.AgenciaBanco;
 
 public class Conta {
 	//para utilizar onde haverá valores de saldo,limite transferencia e etc.
 	DecimalFormat df = new DecimalFormat("#0.00");
 	
+	int idConta;
 	String numeroConta;
 	double saldoConta;
 	double limiteConta = 100.00d;
 	AgenciaBanco numero;
 	
+	public static int contador = 0;
+	
+	//construtor 
+	public Conta() {
+		Conta.contador++;
+		this.idConta = Conta.contador;
+	}
 	//metodo
 	public void deposita (double valor){
 		this.saldoConta += valor;
@@ -37,12 +47,14 @@ public class Conta {
 		this.numeroConta = numero;
 		this.saldoConta = saldo;
 	}
-	//metodo padrao
-	public Conta(){
-	}
 	//construtor para  fazer a transferencia entre contas
 	public void transfere(Conta destino, double valor) {
 		this.saldoConta -= valor;
 		destino.saldoConta += valor;
 	}
+	public static void zerarContador() {
+		System.out.println("Qtd de contas criadas = " + Conta.contador);
+		Conta.contador = 0;
+	}
+
 }
