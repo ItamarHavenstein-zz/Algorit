@@ -8,13 +8,43 @@ public class Conta {
 	//para utilizar onde haverá valores de saldo,limite transferencia e etc.
 	DecimalFormat df = new DecimalFormat("#0.00");
 	
-	int idConta;
-	String numeroConta;
-	double saldoConta;
-	double limiteConta = 100.00d;
-	AgenciaBanco numero;
-	
+	private int idConta;
+	private String numeroConta;
+	private double saldoConta;
+	private double limiteConta = 100.00d;
+	private AgenciaBanco numero;
 	public static int contador = 0;
+	
+	public int getIdConta() {
+		return idConta;
+	}
+	public void setIdConta(int idConta) {
+		this.idConta = idConta;
+	}
+	public String getNumeroConta() {
+		return numeroConta;
+	}
+	public void setNumeroConta(String numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+	public double getSaldoConta() {
+		return saldoConta;
+	}
+	public void setSaldoConta(double saldoConta) {
+		this.saldoConta = saldoConta;
+	}
+	public double getLimiteConta() {
+		return limiteConta;
+	}
+	public void setLimiteConta(double limiteConta) {
+		this.limiteConta = limiteConta;
+	}
+	public AgenciaBanco getNumero() {
+		return numero;
+	}
+	public void setNumero(AgenciaBanco numero) {
+		this.numero = numero;
+	}
 	
 	//construtor 
 	public Conta() {
@@ -29,7 +59,7 @@ public class Conta {
 	public void saca (double valor){
 		this.saldoConta -= valor;
 	}
-	//metodo
+	//metodo imprime extrato da conta
 	public  String extrato () {
 		String extrato = "";
 		extrato += "\n Numero da Conta: "+this.numeroConta;
@@ -42,8 +72,9 @@ public class Conta {
 	public double saldoDisponivel(){
 		return this.saldoConta + this.limiteConta;
 	}
-	//Construtor
+	//Construtor para inserir os dados de numero e saldo da conta
 	public Conta(String numero, double saldo){
+		Conta.contador++;
 		this.numeroConta = numero;
 		this.saldoConta = saldo;
 	}
@@ -52,6 +83,7 @@ public class Conta {
 		this.saldoConta -= valor;
 		destino.saldoConta += valor;
 	}
+	//metodo para zerar o contador, primeiro o metodo mostra quantas contas existem e depois aplica a sua função que é zerar o contador.
 	public static void zerarContador() {
 		System.out.println("Qtd de contas criadas = " + Conta.contador);
 		Conta.contador = 0;

@@ -10,22 +10,22 @@ public class TesteGerente {
 		
 		//inserção de valores
 		Gerente ger = new Gerente();
-		ger.nomeBoss = "Paulo";
-		ger.salarioBoss = 1000.00d;
+		ger.setNomeBoss("Marcos");
+		ger.setSalarioBoss(1000d);
 		
 		//aplicação do metodo, colocando aumento de salario de (15) por cento
 		ger.aumentoBoss(15);
 		//impressão do resultado apos o aumento de salario
-			System.out.println("Salario do gerente "+df.format(ger.salarioBoss)+"R$");
+			System.out.println("Salario do gerente "+df.format(ger.getSalarioBoss())+"R$");
 		
 		//inserção de valores novos para outro gerente
 		Gerente ger1 = new Gerente();
-		ger1.nomeBoss = "Antonio";
-		ger1.salarioBoss = 900.00d;
+		ger1.setNomeBoss("Antonio"); 
+		ger1.setSalarioBoss(900d);
 		
 		//aplicando o metodo a uma taxa fixa de 10 por cento
 		ger1.aumentoBoss();
 		//impressão do salario novo
-			System.out.println("Salario do gerente "+df.format(ger1.salarioBoss)+"R$");
+			System.out.println("Salario do gerente "+df.format(ger1.getSalarioBoss())+"R$");
 	}
 }

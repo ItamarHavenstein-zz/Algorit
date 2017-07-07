@@ -30,4 +30,5 @@ public class Turma {
 	public void setTipoEnsino(String tipoEnsino) {
 		this.tipoEnsino = tipoEnsino;
 	}
+
 }

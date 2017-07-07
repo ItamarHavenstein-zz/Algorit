@@ -17,15 +17,15 @@ public class TesteAlunoTurma {
 		alu.dataNasc = sdf.parse("10/10/1990"); 
 		alu.rg = "256589874";
 		//inserção dos valores nas variaveis da tabela turma utilizando a ligação entre tabelas
-		alu.turma.periodo = "Matutino";
-		alu.turma.serie = 2;
-		alu.turma.sigla = "Java";
-		alu.turma.tipoEnsino = "Semi-Presencial";
+		alu.turma.setPeriodo("Matutino");
+		alu.turma.setSerie(2);
+		alu.turma.setSigla("Java");
+		alu.turma.setTipoEnsino("Semi-Presencial");
 		
 		System.out.println("O aluno "+alu.nome+" nasceu em "+sdf.format(alu.dataNasc)+
-				"\n com o rg de numero "+alu.rg+" estuda no periodo "+alu.turma.periodo+
-				"\n na serie "+alu.turma.serie+" do curso de "+alu.turma.sigla+
-				"\n com tipo de ensino "+alu.turma.tipoEnsino);
+				"\n com o rg de numero "+alu.rg+" estuda no periodo "+alu.turma.getPeriodo()+
+				"\n na serie "+alu.turma.getSerie()+" do curso de "+alu.turma.getSigla()+
+				"\n com tipo de ensino "+alu.turma.getTipoEnsino());
 		
 	}
 }

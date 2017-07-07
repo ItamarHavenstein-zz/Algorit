@@ -5,7 +5,7 @@ import java.util.Date;
 public class CartaoDeCredito {
 	private int numeroCartao;
 	private Date validadeCartao;
-	private ClientesBanco cliente;
+    ClientesBanco cliente;
 	
 	public int getNumeroCartao() {
 		return numeroCartao;

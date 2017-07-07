@@ -3,13 +3,16 @@ package JavaPrivate;
 import java.text.DecimalFormat;
 
 public class Conta {
+
 	//para utilizar onde haverá valores de saldo,limite transferencia e etc.
 	DecimalFormat df = new DecimalFormat("#0.00");
 	
 	private String numeroConta;
 	private double saldoConta;
 	private double limiteConta = 100.00d;
-	private AgenciaBanco numero;
+    AgenciaBanco numero;
+
+	
 	
 	public String getNumeroConta() {
 		return numeroConta;

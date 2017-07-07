@@ -2,11 +2,14 @@ package JavaPrivate;
 
 import java.util.Date;
 
+import Orientacao_a_Objetos.Turma;
+
 public class Aluno {
+	
 	private String nome;
 	private String rg;
 	private Date dataNasc;
-	private Turma turma;
+	public Turma turma;
 	
 	public String getNome() {
 		return nome;
@@ -29,7 +32,9 @@ public class Aluno {
 	public Turma getTurma() {
 		return turma;
 	}
-	public void setTurma(Turma turma) {
+	//preciso fazer para ter uma ligação entre as tabelas
+	public void turma(Turma turma) {
 		this.turma = turma;
+		
 	}
 }

@@ -1,6 +1,6 @@
 package JavaHeranca;
 
-public class Secretarias {
+public class Secretarias extends Funcionarios {
 
 	private String ramal;
 
@@ -10,5 +10,10 @@ public class Secretarias {
 
 	public void setRamal(String ramal) {
 		this.ramal = ramal;
+	}
+
+	@Override
+	public String info() {
+		return super.info() + "\nRamal: " + ramal;
 	}
 }

@@ -3,18 +3,22 @@ package Static;
 import java.text.DecimalFormat;
 
 public class FuncionarioEscola {
+	DecimalFormat df = new DecimalFormat("#0.00");
+	
 	String nomeFun;
 	double salarioFun;
+    double valeRefeicao = 10d;
 	
 	// construtor para aumento de salario
 	void aumento (double valor){
 		this.salarioFun += valor;
 	}
 	
-	//metodo, mostra as informações do funcionario nome e salario
+	//metodo, mostra as informações do funcionario nome,salario e vale refeição
 	public String info () {
-		DecimalFormat df = new DecimalFormat();
-		return this.nomeFun +",\nSalario "+ df.format(this.salarioFun);
+		return this.nomeFun +
+				",\nSalario "+ df.format(this.salarioFun)+"R$"+
+				"\ncom vale Refeição de "+df.format(valeRefeicao)+"R$ ao dia.";
 	}
 	//metodo
 	public FuncionarioEscola(){
@@ -32,5 +36,8 @@ public class FuncionarioEscola {
 	public void salarioFun(double salario) {
 		this.salarioFun = salario;	
 	}
-	
+	//
+	public void ValeRefeicao(double taxa){
+		this.valeRefeicao = valeRefeicao *((taxa/100)+1);
+	}
 }

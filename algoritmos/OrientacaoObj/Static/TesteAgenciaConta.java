@@ -5,22 +5,38 @@ import Orientacao_a_Objetos.AgenciaBanco;
 public class TesteAgenciaConta {
 	
 	public static void main(String[] args) {
-		AgenciaBanco age = new AgenciaBanco(1234);
-
+		AgenciaBanco agencia = new AgenciaBanco(1234);
+		
+		//mostra quantas contas tenho criadas ate o momento
 		System.out.println("Qtd de Contas = " + Conta.contador);
-
-		Conta conta = new Conta("123456", 1500.56d);
+		
+		//criando uma conta
+		Conta conta = new Conta();
+		conta.setNumeroConta("123456");
+		conta.setSaldoConta(1500d);
+		//imprimindo novamente quantas contas foram criadas
 		System.out.println("Qtd de Contas = " + Conta.contador);
-		System.out.println("Id da conta 1 " + conta.idConta);
+		//mostra qual é o id da conta 1
+		System.out.println("Id da conta 1 " + conta.getIdConta());
 
-		Conta conta2 = new Conta("123456", 500d);
+		//criando a segunda conta
+		Conta conta2 = new Conta();
+		conta2.setSaldoConta(1500d);
+		//imprimimdo novamente quantas contas eu criei
 		System.out.println("Qtd de Contas = " + Conta.contador);
-		System.out.println("Id da conta 2 " + conta2.idConta);
+		//mostra o id da segunda conta
+		System.out.println("Id da conta 2 " + conta2.getIdConta());
 
+		//metodo criado na classe conta para zerar o contador, mostra quantas contas criadas ate o momento e depois zera o contador
 		//Conta.zerarContador();
 
-		System.out.println(Conta.contador);
+		//pedimos para imprimir a variavel contador para ver se o contador está em zero
+		System.out.println("Qtd de contas: "+Conta.contador+" criadas");
 
+		//por que nao esta funcionando.R: precisa colocar o conta.contador++ dentro do construtor conta(numero,saldo) ai vai funcionar
+		Conta conta3 = new Conta("12345", 1200d);
+		System.out.println("Qtd de Contas = "+Conta.contador);
+	
 	}
 	
 }

@@ -11,23 +11,23 @@ public class TesteConta {
 
 		// metodo padrao para configurar cada valor
 		Conta conta1 = new Conta();// metodo padrao
-		conta1.numeroConta = "10";
-		conta1.saldoConta = 150.45d;
-		System.out.println(" Conta 1: " + conta1.numeroConta + " saldo da conta " + df.format(conta1.saldoConta)
-				+ " limite da Conta " + df.format(conta1.limiteConta));
+		conta1.setNumeroConta("10");
+		conta1.setSaldoConta(150.45d);
+		System.out.println(" Conta 1: " + conta1.getNumeroConta() + " saldo da conta " + df.format(conta1.getSaldoConta())
+				+ " limite da Conta " + df.format(conta1.getLimiteConta()));
 
 		Conta conta2 = new Conta("200", 189.55d);// construtor
-		System.out.println(" Conta 2: " + conta2.numeroConta + " saldo da conta " + df.format(conta2.saldoConta)
-				+ " limite da Conta " + df.format(conta2.limiteConta));
+		System.out.println(" Conta 2: " + conta2.getNumeroConta()+ " saldo da conta " + df.format(conta2.getSaldoConta())
+				+ " limite da Conta " + df.format(conta2.getLimiteConta()));
 
 		// faz uma ligação entre as classes conta e agenciaBanco
 		AgenciaBanco age = new AgenciaBanco(1234);
-		conta1.numero = age;
-		conta2.numero = age;
+		conta1.setNumero(age);
+		conta2.setNumero(age);
 
 		// testando metodos deposita,saca e confere saldo total e extrato
 		Conta conta3 = new Conta("130", 100.00d);// construtor
-		conta3.numero = age;// faz a ligação entre a conta3 com a agenciabanco
+		conta3.setNumero(age);// faz a ligação entre a conta3 com a agenciabanco
 		// inserindo valores nas variaveis
 		// conta3.numeroConta = "130";
 		// conta3.saldoConta = 100.00d;
@@ -55,12 +55,12 @@ public class TesteConta {
 		 */
 		Conta conta4 = new Conta("130", 100.00d);// criação da nova conta
 													// utilizando construtor
-		conta4.numero = age;// faz a ligação entre a conta4 com a agenciabanco
+		conta4.setNumero(age);// faz a ligação entre a conta4 com a agenciabanco
 		// imprimindo todos os valores atribuidos para conta,saldo,numerodeconta
 		// e agencia
-		System.out.println("O numero da conta: " + conta4.numeroConta + " com saldo de " + df.format(conta4.saldoConta)
-				+ " tendo limite da conta de " + df.format(conta4.limiteConta) + " da agencia "
-				+ conta4.numero.numeroAgencia);
+		System.out.println("O numero da conta: " + conta4.getNumeroConta() + " com saldo de " + df.format(conta4.getSaldoConta())
+				+ " tendo limite da conta de " + df.format(conta4.getLimiteConta()) + " da agencia "
+				+ conta4.numero.getNumeroAgencia());
 		// utilizando o metodo criado na classe conta, onde pre-configuramos o
 		// que queriamos mostrar.
 		System.out.println(conta4.extrato());
@@ -69,8 +69,8 @@ public class TesteConta {
 		AgenciaBanco agencia = new AgenciaBanco(9876);
 		Conta conta5 = new Conta("352", 1000.00d);
 		Conta conta6 = new Conta("452", 800.00d);
-		conta6.numero = agencia;
-		conta5.numero = agencia;
+		conta6.setNumero(agencia);
+		conta5.setNumero(agencia);
 		
 		//imprimindo o extrato das contas
 		System.out.println(conta5.extrato());
@@ -81,8 +81,8 @@ public class TesteConta {
 		 * da transferencia entre as contas.*/
 		conta5.transfere(conta6, 200.00d);
 		
-		System.out.println("numero da conta "+conta5.numeroConta+" saldo "+conta5.saldoConta+
-				"\nnumero da conta "+conta6.numeroConta+" saldo "+conta6.saldoConta);
+		System.out.println("numero da conta "+conta5.getNumeroConta()+" saldo "+conta5.getSaldoConta()+
+				"\nnumero da conta "+conta6.getNumeroConta()+" saldo "+conta6.getSaldoConta());
 
 	}
 }
