@@ -5,4 +5,7 @@ package Meu;
  segundo vale 1, daí por diante, o n-ésimo elemento vale o (n-1)-ésimo elemento somado ao (n-2)-ésimo elemento (ex: 8 = 5 + 3).*/
 public class Exercicio6 {
 
+	public static void main(String[] args) {
+		
+	}
 }

@@ -38,13 +38,8 @@ public class Pessoa {
 		this.rg = rg;
 	}
 	
-	//construtor
-	public Pessoa (String nome, Date data, int idade, String rg){
-		this.setNome(nome);
-		this.setDataNascimento(data);
-		this.setIdade(idade);
-		this.setRg(rg);
-	}
+	
+	
 	public String Informacoes(){
 		String info = "";
 		info += "\nNome: "+this.getNome();

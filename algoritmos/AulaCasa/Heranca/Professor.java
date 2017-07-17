@@ -1,7 +1,6 @@
 package Heranca;
 
 import java.text.DecimalFormat;
-import java.util.Date;
 
 public class Professor extends Pessoa{
 	DecimalFormat df = new DecimalFormat("#0.00");
@@ -31,17 +30,16 @@ public class Professor extends Pessoa{
 		this.disciplina = disciplina;
 	}
 	//construtor
-	public Professor(String nome, Date data, int idade, String rg, double salario, String registro, String disciplina) {
-		super(nome, data, idade, rg);
+	public void  Dados( double salario, String registro, String disciplina) {
 		this.setSalario(salario);
 		this.setRegistro(registro);
 		this.setDisciplina(disciplina);
 	}
 	@Override
 	public String Informacoes() {
-		System.out.println("Informações do Professor");
+		System.out.println("\nInformações do Professor");
 		return super.Informacoes()+
-				"\nSalario "+df.format(this.getSalario())+
+				"\nSalario "+df.format(this.getSalario())+"R$"+
 				"\nRegistro do Professor "+this.getRegistro()+
 				"\nDicsciplina "+this.getDisciplina();
 		}
