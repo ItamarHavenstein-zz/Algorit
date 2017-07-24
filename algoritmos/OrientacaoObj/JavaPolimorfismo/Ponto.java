@@ -3,17 +3,8 @@ package JavaPolimorfismo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Funcionarios {
+public class Ponto {
 
-	private int codigo;
-
-	public int getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
 	SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/ yyyy HH:mm:ss");
 
 	public void registraEntrada(Funcionarios f) {

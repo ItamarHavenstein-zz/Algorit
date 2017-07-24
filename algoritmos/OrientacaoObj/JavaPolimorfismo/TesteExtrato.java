@@ -32,7 +32,8 @@ public class TesteExtrato {
 		contaco.setAgencia(agencia);
 		contaco.getExtrato();
 		
-		System.out.println("nome "+cliente.getNome());
+		System.out.println();
+		
 	
 		
 	}
