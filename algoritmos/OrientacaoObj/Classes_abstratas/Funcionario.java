@@ -6,6 +6,7 @@ public abstract class Funcionario {
 	private int codigo;
 	
 	public abstract void informacoes();
+	public abstract void bonificacao();
 	
 	public String getNome() {
 		return nome;
