@@ -1,25 +1,33 @@
 package Interfaces;
 
-public class ContaCorrente extends Conta implements Banco{
+import java.text.DecimalFormat;
 
-	
+public class ContaCorrente extends Conta implements Banco{
+	DecimalFormat df = new DecimalFormat("#,##0.00R$");
 
 	private double saldo;
 	private double limite;
 	private double encargos;
+	private double valorDep;
+	private double valorSac;
+		
 	
-	public ContaCorrente(String nome, String numConta, double saldo, double limite, double encargos) {
-		super(nome, numConta);
-		this.setSaldo(saldo);
-		this.setLimite(limite);
-		this.setEncargos(encargos);
+	public double getValorSac() {
+		return valorSac;
 	}
-	
-	@Override
-	public String geradordeExtrato() {
-		return super.geradordeExtrato()+"\nSaldo da Conta Corrente: "+this.getSaldo()+
-				"\nLimite da Conta: "+this.getLimite()+"\nEncargos da Conta: "+this.getEncargos();
+
+	public void setValorSac(double valorSac) {
+		this.valorSac = valorSac;
 	}
+
+	public double getValorDep() {
+		return valorDep;
+	}
+
+	public void setValorDep(double valorDep) {
+		this.valorDep = valorDep;
+	}
+
 	public double getSaldo() {
 		return saldo;
 	}
@@ -46,14 +54,27 @@ public class ContaCorrente extends Conta implements Banco{
 
 	@Override
 	public void deposita(double valor) {
-		this.saldo += valor;
-		
+		this.setValorDep(valor);
+		this.saldo += valor - getEncargos();
+		System.out.println("Valor Depositado "+df.format(getValorDep())+"\nEncargo da Conta: "+df.format(getEncargos())
+		+"\nSaldo: "+df.format(getSaldo()));
+				
 	}
 
 	@Override
-	public void saca(double valor) {
-		this.saldo -= valor;
-		
+	public void saca(double valor){		
+		this.setValorSac(valor);
+		this.saldo -= valor + getEncargos();
+		System.out.println("Valor Sacado: "+df.format(getValorSac())+"\nEncargos da Conta: "+df.format(getEncargos())
+		+"\nSaldo: "+df.format(getSaldo()));
+	}	
+	@Override
+	public void gerarExtrato() {
+		System.out.println(" Conta Corrente ");
+		super.gerarExtrato();
+		System.out.println("Saldo: "+df.format(getSaldo()));
+		System.out.println("Limite: "+df.format(getLimite()));
+		System.out.println("Encargos da Conta: "+df.format(getEncargos()));
 	}
-
+	
 }

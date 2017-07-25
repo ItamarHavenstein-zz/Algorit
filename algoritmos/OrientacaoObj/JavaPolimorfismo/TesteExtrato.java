@@ -1,5 +1,6 @@
 package JavaPolimorfismo;
 
+import java.lang.reflect.GenericArrayType;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -30,9 +31,7 @@ public class TesteExtrato {
 		
 		contaco.setCliente(cliente); 
 		contaco.setAgencia(agencia);
-		contaco.getExtrato();
-		
-		System.out.println();
+		 
 		
 	
 		

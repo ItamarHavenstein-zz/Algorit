@@ -1,23 +1,17 @@
 package Interfaces;
 
-public class Conta {
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+public class Conta {
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM   hh:mm:ss");
 	
 	private String nome;
 	private String numeroConta;
 	private Agencia agencia;
 	
-	
-	public Conta(String nome,String numConta){
-		this.setNome(nome);
-		this.setNumeroConta(numConta);	
-	}
-	public String geradordeExtrato() {
-		String Extrato = "";
-		Extrato = "Nome do Cliente: "+this.getNome();
-		Extrato = "\nNumero Da Conta: "+this.getNumeroConta();
-		Extrato = "\nNumero da Agencia: "+this.agencia.getAgencia();
-	    return Extrato;
+	public Agencia getAgencia() {
+		return agencia;
 	}
 	public String getNome() {
 		return nome;
@@ -30,10 +24,15 @@ public class Conta {
 	}
 	public void setNumeroConta(String numeroConta) {
 		this.numeroConta = numeroConta;
-	}
-	
+	}	
 	public void setAgencia(Agencia agencia) {
 		this.agencia = agencia;
 	}
-
+	public void gerarExtrato() {
+		System.out.println("Agencia: "+getAgencia().getAgencia());
+		Date agora = new Date();
+		System.out.println(sdf.format(agora));
+		System.out.println("Nome do Cliente: "+getNome());		
+		System.out.println("Numero da Conta: "+getNumeroConta());
+	}
 }

@@ -5,14 +5,7 @@ public class ContasBanco {
 	private Cliente cliente;
 	private Agencia agencia;
 	private String numConta;
-	private Extratos extrato;
 	
-	public Extratos getExtrato() {
-		return extrato;
-	}
-	public void setExtrato(Extratos extrato) {
-		this.extrato = extrato;
-	}
 	public Cliente getCliente() {
 		return cliente;
 	}
