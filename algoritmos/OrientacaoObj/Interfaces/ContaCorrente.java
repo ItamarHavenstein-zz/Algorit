@@ -2,17 +2,19 @@ package Interfaces;
 
 public class ContaCorrente extends Conta implements Banco{
 
+	
+
 	private double saldo;
 	private double limite;
 	private double encargos;
 	
-	public ContaCorrente(String nome, String numConta, double saldo, double limite, double encargos){
-		this.setNome(nome);
-		this.setNumeroConta(numConta);
+	public ContaCorrente(String nome, String numConta, double saldo, double limite, double encargos) {
+		super(nome, numConta);
 		this.setSaldo(saldo);
 		this.setLimite(limite);
 		this.setEncargos(encargos);
 	}
+	
 	@Override
 	public String geradordeExtrato() {
 		return super.geradordeExtrato()+"\nSaldo da Conta Corrente: "+this.getSaldo()+
@@ -44,13 +46,13 @@ public class ContaCorrente extends Conta implements Banco{
 
 	@Override
 	public void deposita(double valor) {
-		// TODO Auto-generated method stub
+		this.saldo += valor;
 		
 	}
 
 	@Override
 	public void saca(double valor) {
-		// TODO Auto-generated method stub
+		this.saldo -= valor;
 		
 	}
 

@@ -2,15 +2,17 @@ package Interfaces;
 
 public  class ContaPoupanca extends Conta implements Banco{
 	
+	
+
 	private double saldo;
 	private double juros;
 	
-	public ContaPoupanca(String nome,String numConta, double saldo, double juros){
-		this.setNome(nome);
-		this.setNumeroConta(numConta);
+	public ContaPoupanca(String nome, String numConta, double saldo, double juros) {
+		super(nome, numConta);
 		this.setSaldo(saldo);
 		this.setJuros(juros);
 	}
+	
 	@Override
 	public String geradordeExtrato() {
 		return super.geradordeExtrato()+"\nSaldo da Conta Poupança: "+this.getSaldo()+
@@ -34,13 +36,13 @@ public  class ContaPoupanca extends Conta implements Banco{
 
 	@Override
 	public void deposita(double valor) {
-		// TODO Auto-generated method stub
+		this.saldo += valor;
 		
 	}
 
 	@Override
 	public void saca(double valor) {
-		// TODO Auto-generated method stub
+		this.saldo -= valor;
 		
 	}
 	
