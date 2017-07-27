@@ -1,21 +1,50 @@
+/**
+ * este pacote é responsável pelas classes de uma conta
+ */
 package Interfaces;
 
 import java.text.DecimalFormat;
-
+/**
+ * Esta classe é responsável pela conta corrente
+ * @author Noturno
+ *
+ */
 public class ContaCorrente extends Conta implements Banco{
 	DecimalFormat df = new DecimalFormat("#,##0.00R$");
-
+	/**
+	 * esta classe  é responsável pelos atributos Saldo, Limite, Encargos, Valordep, Valorsac
+	 * 
+	 */
 	private double saldo;
 	private double limite;
 	private double encargos;
 	private double valorDep;
 	private double valorSac;
 		
+	/**
+	 * Este construtor é responsável pela conta corrente
+	 * @param nome: este parametro é responsável pelo nome
+	 * @param numeroConta: este parametro é responsável pelo numero da conta
+	 * @param agencia:  este parametro é responsável pelo numero da agencia
+	 * @param saldo: este parametro é responsável pelo saldo da conta
+	 * @param limite: este parametro é responsável pelo limite da conta
+	 * @param encargos: este parametro é responsável pelos encargos da conta
+	 */
+	public ContaCorrente(String nome, String numeroConta, Agencia agencia, double saldo, double limite,
+			double encargos) {
+		super(nome, numeroConta, agencia);
+		this.saldo = saldo;
+		this.limite = limite;
+		this.encargos = encargos;
+	}
 	
+	public ContaCorrente() {
+		super();
+	}
+
 	public double getValorSac() {
 		return valorSac;
 	}
-
 	public void setValorSac(double valorSac) {
 		this.valorSac = valorSac;
 	}

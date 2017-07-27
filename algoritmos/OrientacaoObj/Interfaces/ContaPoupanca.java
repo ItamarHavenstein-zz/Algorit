@@ -1,20 +1,48 @@
+/**
+ * Este pacote é responsável pelas classes de uma conta
+ */
 package Interfaces;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/**
+ * Esta classe é responsável pela conta poupança
+ * @author Noturno
+ *
+ */
 public  class ContaPoupanca extends Conta implements Banco{
 	DecimalFormat df = new DecimalFormat("#,##0.00R$");
 	SimpleDateFormat sdf = new SimpleDateFormat("MM");
 
-	
+	/**
+	 * esta classe é responsável pelos atributos saldo, juros, valordep e valorsac
+	 */
 	private double saldo;
 	private double juros;
 	private double valorDep;
 	private double valorSac;
 		
+	/**
+	 * este construtor é responsável pela conta poupança
+	 * @param nome: este parametro é responsável pelo nome
+	 * @param numeroConta: este parametro é responsável pelo numero da conta
+	 * @param agencia: este parametro é responsável pelo numero da agencia
+	 * @param saldo: este parametro é responsavel pelo saldo da conta
+	 * @param juros: este parametro é responsavel pelo juros da conta
+	 */
+	public ContaPoupanca(String nome, String numeroConta, Agencia agencia, double saldo, double juros) {
+		super(nome, numeroConta, agencia);
+		this.saldo = saldo;
+		this.juros = juros;
+	}
+
 	
+	public ContaPoupanca() {
+		super();
+	}
+
+
 	public double getValorDep() {
 		return valorDep;
 	}

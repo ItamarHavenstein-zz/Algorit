@@ -4,8 +4,8 @@ public class TesteFuncionario {
 
 	public static void main(String[] args) {
 		//introduz as informações nas variaveis
-		Gerente g = new Gerente("Everton da Silva", 1,"everton", 1500.0d, 15d);
-		Atendente a = new Atendente("Patricia Souza", 2,"150",956.25d, 10d);
+		Gerente g = new Gerente("Everton da Silva", 1,"everton", 1500.0d, 1d);
+		Atendente a = new Atendente("Patricia Souza", 2,"150",956.25d, -1d);
 		
 		//imprime as informações na tela sobre os funcionarios
 		g.informacoes();

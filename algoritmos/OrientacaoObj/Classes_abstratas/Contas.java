@@ -6,6 +6,11 @@ public abstract class Contas {
 	private String nome;
 	
 	
+	public Contas(String numeroConta, String nome) {
+		super();
+		this.numeroConta = numeroConta;
+		this.nome = nome;
+	}
 	public String getNome() {
 		return nome;
 	}
