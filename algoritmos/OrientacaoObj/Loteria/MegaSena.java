@@ -1,5 +1,6 @@
 package Loteria;
 
+import java.awt.List;
 import java.util.ArrayList;
 
 public class MegaSena {
@@ -14,14 +15,14 @@ public class MegaSena {
 		// o resultado do sorteio realizado
 		int[] resultado = new int[] {59, 25, 11, 9, 10, 2};
 		
-		
 		int acertos = 0;
+				
 		for(int aux = 0; aux < 6;aux++){
 			for(int aux1 =0;aux1<6;aux1++){
 				if(resultado[aux] == aposta1[aux1]){
-					acertos += 1;					
-				}
-			}
+					acertos += 1;
+				}		
+			}		
 		}		
 		if(acertos == 6){
 			System.out.println("Ganhou a mega sena");
