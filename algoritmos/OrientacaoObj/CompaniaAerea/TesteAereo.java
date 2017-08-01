@@ -18,9 +18,9 @@ public class TesteAereo {
 		// Adicionando a lista dos boings dentro da compania aeres criada
 		azul.setBoing(boings);
 		// Avioes Da compania Aerea
-		Monomotor mono1 = new Monomotor(4, 200);
-		Monomotor mono2 = new Monomotor(4, 200);
-		Monomotor mono3 = new Monomotor(4, 200);
+		Monomotor mono1 = new Monomotor(4, 200d);
+		Monomotor mono2 = new Monomotor(4, 200d);
+		Monomotor mono3 = new Monomotor(4, 200d);
 		// Criando a lista dos monomotores
 		ArrayList<Monomotor> monomotor = new ArrayList();
 		monomotor.add(mono3);
@@ -29,8 +29,8 @@ public class TesteAereo {
 		// Adicionando a lista dos monomotores dentro da compania aeres criada
 		azul.setMonomotor(monomotor);
 		// Criando a lista dos bimotores
-		Bimotor bimo1 = new Bimotor(16, 300);
-		Bimotor bimo2 = new Bimotor(16, 300);
+		Bimotor bimo1 = new Bimotor(16, 300d);
+		Bimotor bimo2 = new Bimotor(16, 300d);
 		// Criando a lista dos bimotores
 		ArrayList<Bimotor> bimo = new ArrayList();
 		bimo.add(bimo2);
@@ -38,7 +38,24 @@ public class TesteAereo {
 		// Adicionando a lista dos bimotoresF dentro da compania aeres criada
 		azul.setBimotor(bimo);
 
-		System.out.println(azul.Fatura());
+	System.out.println("faturamento do compania aerea Azul: " + azul.Fatura());
+
+		// uma nova companhia aerea
+		CompaniaAerea LATAM = new CompaniaAerea();
+		
+		//Criando os boings
+		Boing fly = new Boing(30, 100d);
+		Boing fly1 = new Boing(50, 100d);
+		
+		//Criando o arraylist e adcionando os boings dentro
+		ArrayList<Boing> aviao = new ArrayList();
+		aviao.add(fly1);
+		aviao.add(fly);
+		
+		//adicionando a lista dos avioes boing dentro da companhia
+		LATAM.setBoing(aviao);
+		
+		System.out.println("Faturamento da companhia da LATAM: "+LATAM.Fatura());
 
 	}
 }
