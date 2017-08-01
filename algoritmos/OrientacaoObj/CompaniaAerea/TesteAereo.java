@@ -44,8 +44,8 @@ public class TesteAereo {
 		CompaniaAerea LATAM = new CompaniaAerea();
 		
 		//Criando os boings
-		Boing fly = new Boing(30, 100d);
-		Boing fly1 = new Boing(50, 100d);
+		Boing fly = new Boing(50, 100d);
+		Boing fly1 = new Boing(30, 100d);
 		
 		//Criando o arraylist e adcionando os boings dentro
 		ArrayList<Boing> aviao = new ArrayList();
@@ -55,7 +55,7 @@ public class TesteAereo {
 		//adicionando a lista dos avioes boing dentro da companhia
 		LATAM.setBoing(aviao);
 		
-		System.out.println("Faturamento da companhia da LATAM: "+LATAM.Fatura());
+		System.out.println("Faturamento da companhia da LATAM: "+LATAM.FaturaTeste());
 
 	}
 }
