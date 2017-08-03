@@ -1,20 +1,25 @@
 package CompaniaAerea;
 
+import java.text.DecimalFormat;
+
 import java.util.ArrayList;
 
 public class TesteAereo {
 
 	public static void main(String[] args) {
+		DecimalFormat df = new DecimalFormat("#,##0.00R$");
 		// Criado a compania aerea
 		CompaniaAerea azul = new CompaniaAerea();
 
 		// Avioes Da compania Aerea
 		Boing boing1 = new Boing(50, 100d);
 		Boing boing2 = new Boing(50, 100d);
+		Boing boing3 = new Boing(30, 100d);
 		// Criando a lista dos boings
 		ArrayList<Boing> boings = new ArrayList();
 		boings.add(boing2);
 		boings.add(boing1);
+		boings.add(boing3);
 		// Adicionando a lista dos boings dentro da compania aeres criada
 		azul.setBoing(boings);
 		// Avioes Da compania Aerea
@@ -38,8 +43,9 @@ public class TesteAereo {
 		// Adicionando a lista dos bimotoresF dentro da compania aeres criada
 		azul.setBimotor(bimo);
 
-	System.out.println("faturamento do compania aerea Azul: " + azul.Fatura());
+	System.out.println("faturamento do compania aerea Azul: " + df.format(azul.Faturamento()));
 
+	//fazer o teste desta nova companhia.
 		// uma nova companhia aerea
 		CompaniaAerea LATAM = new CompaniaAerea();
 		
@@ -55,7 +61,7 @@ public class TesteAereo {
 		//adicionando a lista dos avioes boing dentro da companhia
 		LATAM.setBoing(aviao);
 		
-		System.out.println("Faturamento da companhia da LATAM: "+LATAM.FaturaTeste());
+		//System.out.println("Faturamento da companhia da LATAM: "+LATAM.Faturamento());
 
 	}
 }
