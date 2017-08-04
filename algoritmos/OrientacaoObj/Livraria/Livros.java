@@ -4,14 +4,15 @@ public class Livros extends Loja {
 
 	private String autor;
 
-	public Livros(String nome, double preco, String autor) {
-		super(nome, preco);
+	public Livros(String nome, double preco, String autor, String codbarras) {
+		super(nome, preco, codbarras);
 		this.autor = autor;
 	}
 
 	@Override
 	public String toString() {
-		return "Livros [autor=" + autor + "]";
+		return "Livro " + super.toString() + ", Autor: " + autor;
+
 	}
 
 	public String getAutor() {
@@ -21,5 +22,9 @@ public class Livros extends Loja {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
+
+	
+
+	
 
 }

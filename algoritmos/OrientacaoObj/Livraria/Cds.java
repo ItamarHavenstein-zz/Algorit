@@ -6,11 +6,12 @@ public class Cds extends Loja {
 
 	@Override
 	public String toString() {
-		return "Cds [numFaixas=" + numFaixas + "]";
+		return "CD " + super.toString() + ", Numero de Faixas: " + numFaixas;
+
 	}
 
-	public Cds(String nome, double preco, String numFaixas) {
-		super(nome, preco);
+	public Cds(String nome, double preco, String numFaixas, String codbarras) {
+		super(nome, preco, codbarras);
 		this.numFaixas = numFaixas;
 	}
 

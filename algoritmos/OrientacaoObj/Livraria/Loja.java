@@ -1,21 +1,47 @@
 package Livraria;
 
-public class Loja {
+import java.text.DecimalFormat;
+import java.util.List;
+
+
+public abstract class Loja implements Comparable<Loja>{
+	DecimalFormat df = new DecimalFormat("#,##0.00R$");
 
 	private String nome;
 	private double preco;
+	private String codBarras;
 
-	public Loja(String nome, double preco) {
+	public Loja(String nome, double preco, String codbarras) {
 		super();
 		this.nome = nome;
 		this.preco = preco;
+		this.codBarras = codbarras;
 	}
 
 	@Override
 	public String toString() {
-		return "Loja [nome=" + nome + ", preco=" + preco + "]";
+		return "Codigo de Barras: " + this.codBarras + ", Nome: " + this.nome + ", Preço: " + df.format(this.preco);
 	}
 
+	/*
+	 * neste metodo, comparo o codigo de barras que tenho dentro do meu
+	 * arraylist com o obj que adiciono para comparação, primeiro preciso dizer
+	 * para o programa que obj é um objeto do tipo Loja senão da erro na
+	 * atribuição.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		Loja prod = (Loja) obj;
+		return this.codBarras.equals(prod.getCodBarras());
+	}
+
+	@Override
+	public int compareTo(Loja o) {
+		return this.nome.compareTo(o.getNome());
+	}
+	
+	
+	
 	public String getNome() {
 		return nome;
 	}
@@ -30,6 +56,14 @@ public class Loja {
 
 	public void setPreco(double preco) {
 		this.preco = preco;
+	}
+
+	public String getCodBarras() {
+		return codBarras;
+	}
+
+	public void setCodBarras(String codBarras) {
+		this.codBarras = codBarras;
 	}
 
 }
