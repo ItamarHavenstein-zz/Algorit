@@ -3,12 +3,17 @@ package Livraria;
 import java.text.DecimalFormat;
 import java.util.List;
 
-
-public abstract class Loja implements Comparable<Loja>{
+public abstract class Loja implements Comparable<Loja> {
 	DecimalFormat df = new DecimalFormat("#,##0.00R$");
 
 	private String nome;
-	private double preco;
+	/*
+	 * colocando a variavel preco como Double que é usada para obj conseguimos
+	 * utilizar em mais metodos do que, se fosse o metodo primitivo double que
+	 * seria usada mais para calculo ou se vc não quiser usalo em alguma funçao
+	 * mais "especifica"
+	 */
+	private Double preco;
 	private String codBarras;
 
 	public Loja(String nome, double preco, String codbarras) {
@@ -37,11 +42,9 @@ public abstract class Loja implements Comparable<Loja>{
 
 	@Override
 	public int compareTo(Loja o) {
-		return this.nome.compareTo(o.getNome());
+		return this.preco.compareTo(o.getPreco());
 	}
-	
-	
-	
+
 	public String getNome() {
 		return nome;
 	}
