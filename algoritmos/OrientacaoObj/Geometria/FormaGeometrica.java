@@ -2,8 +2,8 @@ package Geometria;
 
 public interface FormaGeometrica {
 
-	public abstract Double CalculoPerimetro();
+	public  String CalculoPerimetro();
 
-	public abstract Double CalculoArea();
+	public  String CalculoArea();
 
 }

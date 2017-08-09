@@ -1,6 +1,6 @@
 package Geometria;
 
-public class Circulo extends Quadrilateros implements FormaGeometrica{
+public class Circulo extends Quadrilateros {
 
 	private Double raio;
 	
@@ -18,14 +18,16 @@ public class Circulo extends Quadrilateros implements FormaGeometrica{
 	}
 
 	@Override
-	public Double CalculoPerimetro() {
-		Double soma = 2 * 3.14 * this.getRaio();
+	public String CalculoPerimetro() {
+		String soma = "";
+	     soma ="a soma "+ 2 * 3.14 * this.getRaio();
 		return soma;
 	}
 
 	@Override
-	public Double CalculoArea() {
-		Double soma = 3.14 * (this.getRaio() * this.getRaio());
+	public String CalculoArea() {
+		String soma = "";
+		 soma ="a soma"+ 3.14 * (this.getRaio() * this.getRaio());
 		return soma;
 	}
 

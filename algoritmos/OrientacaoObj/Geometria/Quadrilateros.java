@@ -1,6 +1,6 @@
 package Geometria;
 
-public  abstract class Quadrilateros  {
+public  abstract class Quadrilateros implements FormaGeometrica {
 
 	private Double base;
 	private Double altura;

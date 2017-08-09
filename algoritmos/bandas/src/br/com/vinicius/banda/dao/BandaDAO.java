@@ -17,7 +17,7 @@ public class BandaDAO {
 	public BandaDAO(Connection con) {
 		this.con = con;
 	}
-
+//para fazer uma consulta no banco de dados
 	public List<Banda> lista() throws SQLException {
 		List<Banda> bandas = new ArrayList<>();
 
