@@ -4,7 +4,6 @@ public class ContatoTelefoneCelular extends ContatoTelefone{
 
 	public ContatoTelefoneCelular(String nome, String contato) {
 		super(nome, contato, "Telefone Celular");
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
