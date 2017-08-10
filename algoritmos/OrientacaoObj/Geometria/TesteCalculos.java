@@ -7,13 +7,8 @@ import java.util.Scanner;
 public class TesteCalculos {
 
 	public static void main(String[] args) {
-
 		Scanner scanner = new Scanner(System.in);
-		
-		/*Quadrados quadro = new Quadrados(10d);
-		quadro.CalculoPerimetro();
-		System.out.println(quadro.CalculoPerimetro());*/
-		
+
 		System.out.println("Quantas formas geometrica deseja fazer");
 		int num = scanner.nextInt();
 		int laco = 0;
@@ -29,28 +24,25 @@ public class TesteCalculos {
 				double lado = scanner.nextDouble();
 				lista.add(new Quadrados(lado));
 				laco++;
-			
 			}
 			if (opcao == 2) {
-
+				System.out.println("Digite a altura ");
+				double altura = scanner.nextDouble();
+				System.out.println("Digite a Base ");
+				double base = scanner.nextDouble();
+				lista.add(new Retangulos(base, altura));
 				laco++;
-				
 			}
 			if (opcao == 3) {
-
+				System.out.println("Digite o raio do Circulo");
+				double raios = scanner.nextDouble();
+				lista.add(new Circulo(raios));
 				laco++;
-				
-
 			}
-
 		}
-		
-			for (Quadrilateros quadrado: lista) {
-				
-				System.out.println(quadrado.CalculoArea());
-			
-		
-		scanner.close();
+		for (Quadrilateros quadrado : lista) {
+			System.out.println(quadrado.GeraResposta());
+			scanner.close();
 		}
 	}
 }

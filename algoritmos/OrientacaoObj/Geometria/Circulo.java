@@ -20,15 +20,24 @@ public class Circulo extends Quadrilateros {
 	@Override
 	public String CalculoPerimetro() {
 		String soma = "";
-	     soma ="a soma "+ 2 * 3.14 * this.getRaio();
+	     soma ="O perimetro do circulo "+ (2 * 3.14d * super.getAltura())+"cm";
 		return soma;
 	}
 
 	@Override
 	public String CalculoArea() {
 		String soma = "";
-		 soma ="a soma"+ 3.14 * (this.getRaio() * this.getRaio());
+		 soma = "A area do circulo "+ (3.14d * (super.getAltura() * super.getAltura()))+"cm";
 		return soma;
+	}
+
+	@Override
+	public String GeraResposta() {
+		String resposta = "";
+		resposta += "\nO raio do circulo "+super.getAltura()+"cm";
+		resposta += "\n"+CalculoArea();
+		resposta += "\n"+CalculoPerimetro();
+		return resposta;
 	}
 
 }

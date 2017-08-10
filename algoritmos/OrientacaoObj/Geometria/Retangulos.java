@@ -10,15 +10,25 @@ public class Retangulos extends Quadrilateros {
 	@Override
 	public String CalculoPerimetro() {
 		String soma = "";
-		 soma = "A soma "+ 2*(this.getAltura()+this.getBase());
+		 soma = "O perimetro do Retangulo "+ 2*(super.getAltura()+super.getBase())+"cm";
 		return soma;
 	}
 
 	@Override
 	public String CalculoArea() {
 		String soma = "";
-		soma = "Asoma "+this.getBase() * this.getAltura();
+		soma = "A Area do retangulo "+super.getBase() * super.getAltura()+"cm";
 		return soma;
+	}
+
+	@Override
+	public String GeraResposta() {
+		String resposta = "";
+		resposta += "\nA altura do Retangulo "+super.getAltura()+"cm";
+		resposta += "\nA base do Retangulo "+super.getBase()+"cm";
+		resposta += "\n"+CalculoArea();
+		resposta += "\n"+CalculoPerimetro();
+		return resposta;
 	}
 
 	

@@ -11,15 +11,24 @@ public class Quadrados extends Quadrilateros  {
 	@Override
 	public String CalculoPerimetro() {
 			String soma = "";
-			 soma = "A soma "+(4 * super.getAltura());
+			 soma = "O perimetro do Quadrado "+(4 * super.getAltura())+"cm";
 			return soma;
 		}
 
 	@Override
 	public String CalculoArea() {
 		String soma = "";
-		 soma = "a soma "+  super.getAltura()*super.getAltura();
+		 soma = "A area do Quadrado "+  super.getAltura()*super.getAltura()+"cm";
 		return soma;
+	}
+
+	@Override
+	public String GeraResposta() {
+		String resposta = "";
+		resposta += "\nO lado do Quadrado "+super.getAltura()+"cm";
+		resposta += "\n"+CalculoArea();
+		resposta += "\n"+CalculoPerimetro();
+		return resposta;
 	}
 	}
 
