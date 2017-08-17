@@ -27,8 +27,8 @@ public class Chefe extends Empregado {
 	public String SalarioMensal() {
 		String salario = "";
 		salario += "\nChefe";
-		salario += "\nNome: "+super.getNome()+" "+super.getSobrenome();
-		salario += "\nSalario do Mês "+(calendario.get(Calendar.MONTH)+1)+", "+df.format(ganho)+"R$";
+		salario += "\nNome: " + super.getNome() + " " + super.getSobrenome();
+		salario += "\nSalario do Mês " + (calendario.get(Calendar.MONTH) + 1) + ", " + df.format(ganho) + "R$";
 		return salario;
 	}
 

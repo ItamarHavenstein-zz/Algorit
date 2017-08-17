@@ -22,38 +22,36 @@ public class TrabalhadorHora extends Empregado {
 	@Override
 	public String SalarioMensal() {
 		String salario = "";
-		if(getHorasTrabalhadas()<= 220){
-		salario += "\nTrabalho por Hora";
-		salario += "\nNome: " + super.getNome() + "  " + super.getSobrenome();
-		salario += "\nSalario por Hora: " + this.getSalarioHora();
-		salario += "\nHoras Trabalhadas: " + this.getHorasTrabalhadas();
-		salario += "\nSalario do mês: " + calendario.get(Calendar.MONTH) + "      -     " + df.format( this.ganho)+"R$";
-		return salario;
-				}
-		if(getHorasTrabalhadas() > 220){
+		if (getHorasTrabalhadas() <= 220) {
 			salario += "\nTrabalho por Hora";
 			salario += "\nNome: " + super.getNome() + "  " + super.getSobrenome();
 			salario += "\nSalario por Hora: " + this.getSalarioHora();
 			salario += "\nHoras Trabalhadas: " + this.getHorasTrabalhadas();
-			salario += "\nHoras Extras: " + (this.getHorasTrabalhadas() - 220);
-			salario += "\nSalario do mês: " + calendario.get(Calendar.MONTH) + "-" +df.format( (this.getHoraExtra() + this.getGanho()));
-			salario += "\nHoras Normais: " + this.getSoma() + "      " + df.format(this.getGanho());
-			salario += "\nHoras Extras: " + (this.getHorasTrabalhadas() - 220) + "      " + df.format(this.getHoraExtra());
+			salario += "\nSalario do mês: " + calendario.get(Calendar.MONTH) + "      -     " + df.format(this.ganho)
+					+ "R$";
+			return salario;
+		}
+		if (getHorasTrabalhadas() > 220) {
+			double extra = (this.getHorasTrabalhadas() - 220);
+			salario += "\nTrabalho por Hora";
+			salario += "\nNome: " + super.getNome() + "  " + super.getSobrenome();
+			salario += "\nSalario por Hora: " + this.getSalarioHora() + "R$";
+			salario += "\nHoras Trabalhadas: " + this.getHorasTrabalhadas() + "hrs";
+			salario += "\nHoras Extras: " + extra + "hrs";
+			salario += "\nSalario do mês: " + calendario.get(Calendar.MONTH) + "     -    "
+					+ df.format((((extra * this.getSalarioHora()) * 1.5) + (220 * this.getSalarioHora()))) + "R$";
+			salario += "\nHoras Normais: 220hrs      " + df.format(220 * this.getSalarioHora()) + "R$";
+			salario += "\nHoras Extras: " + extra + "hrs       " + df.format((extra * this.getSalarioHora()) * 1.5)
+					+ "R$";
 			return salario;
 		}
 		return salario;
 	}
 
-	
-
 	@Override
 	public void CalculaGanho() {
-		this.soma =( horasTrabalhadas - 220);
-			
-			this.horaExtra = soma * (salarioHora * ((50d / 100) + 1));
-			
-			this.ganho = (220d * salarioHora);
-		
+		this.ganho = (this.getHorasTrabalhadas() * this.getSalarioHora());
+
 	}
 
 	public double getSalarioHora() {
@@ -87,6 +85,7 @@ public class TrabalhadorHora extends Empregado {
 	public void setHoraExtra(double horaExtra) {
 		this.horaExtra = horaExtra;
 	}
+
 	public double getSoma() {
 		return soma;
 	}

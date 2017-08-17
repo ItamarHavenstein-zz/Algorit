@@ -22,7 +22,7 @@ public class TrabalhadorPecaProduzida extends Empregado {
 		String salario = "";
 		salario += "\nTrabalho por peça Produzida";
 		salario += "\nNome: " + super.getNome() + " " + super.getSobrenome();
-		salario += "\nPreço por peça: " + this.getRemuneracao()+"R$";
+		salario += "\nPreço por peça: " + this.getRemuneracao() + "R$";
 		salario += "\nQuantidade de peças: " + this.getQtdPeca();
 		salario += "\nSalario do Mês: " + (calendario.get(Calendar.MONTH) + 1) + ", " + df.format(getGanho());
 		return salario;

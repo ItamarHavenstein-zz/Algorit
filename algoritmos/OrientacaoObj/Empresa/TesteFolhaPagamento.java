@@ -21,12 +21,16 @@ public class TesteFolhaPagamento {
 		
 		TrabalhadorHora trahora = new TrabalhadorHora("Mauricio", "nobre", 6.45, 200);
 		trahora.CalculaGanho();
-		System.out.println(trahora.SalarioMensal());
+		System.out.println(trahora.SalarioMensal());	
 		
 		TrabalhadorHora trahora1 = new TrabalhadorHora("Maria", "Da Silva", 7.30, 300);
 		trahora.CalculaGanho();
 		System.out.println(trahora1.SalarioMensal());
-		System.out.println(trahora1.getHoraExtra());
+		
+		TrabalhadorComissionado trapcom = new TrabalhadorComissionado("Roberto","Da Silva", 10, 10000, 2000);
+		trapcom.CalculaGanho();
+		System.out.println(trapcom.SalarioMensal());
+	
 		
 	}
 }
