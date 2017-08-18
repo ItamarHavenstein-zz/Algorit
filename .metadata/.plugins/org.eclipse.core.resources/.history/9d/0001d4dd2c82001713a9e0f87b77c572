@@ -1,0 +1,44 @@
+package Despertador;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class TestaRadioRelogio {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		List<RadioRelogio> radios = new ArrayList();
+		
+		
+		System.out.println("Aperte 1 para ligar");
+		int aperte = scanner.nextInt();
+		while (aperte != 0) {
+			System.out.println("Bem Vindo ao seu Rádio");
+
+			System.out.println("Menu \n1-Rádio \n2-Alarme\n0-Desligar");
+			int menu = scanner.nextInt();
+			int submenu = 1;
+			while (submenu != 0) {
+				if (menu == 1) {
+					System.out.println("1-Inserir 5 Rádios    2-Volume      0-Voltar");
+					submenu = scanner.nextInt();
+					if(submenu == 1){
+						System.out.println("Digite O nome da Estação");
+						String nome = scanner.next();
+						System.out.println("Digite o tipo da Estação AM ou FM");
+						String tipo = scanner.next();
+						radios.add(new RadioRelogio(nome, tipo));
+					}
+					if(submenu == 2){
+						System.out.println("Defina o Volume(0 à 10).");
+						int vol = scanner.nextInt();
+						RadioRelogio volume = new RadioRelogio(vol);
+					}
+				}
+			}
+		}
+
+		scanner.close();
+	}
+}

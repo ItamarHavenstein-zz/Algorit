@@ -1,0 +1,36 @@
+package Empresa;
+
+import java.text.DecimalFormat;
+
+public class Chefe extends Empregado {
+	DecimalFormat df = new DecimalFormat("#,##0.00");
+
+	private double ganho;
+
+	public Chefe(String nome, String sobrenome) {
+		super(nome, sobrenome);
+
+	}
+
+	@Override
+	public String SalarioMensal() {
+		String salario = "";
+		salario += "\nChefe";
+		salario += "\nNome: "+super.getNome()+" "+super.getSobrenome();
+		salario += "\nSalario: "+df.format(ganho)+"R$";
+		return salario;
+	}
+
+	@Override
+	public void CalculaGanho() {
+		this.ganho = super.getSalario();
+	}
+
+	public double getGanho() {
+		return ganho;
+	}
+
+	public void setGanho(double ganho) {
+		this.ganho = ganho;
+	}
+}
