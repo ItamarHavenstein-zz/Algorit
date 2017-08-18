@@ -10,55 +10,35 @@ public class CompaniaAerea {
 	private List<Monomotor> monomotores;
 	private List<Bimotor> bimotores;
 
-	public String Fatura() {
-
-		double soma = 0;
-		for (int aux = 0; aux < this.boings.size(); aux++) {
-			soma += getBoing().iterator().next().getLugares() * getBoing().iterator().next().getPassagens();
+	
+	public double Faturamento(){
+		double faturamento = 0d;
+		for (Boing boing : getBoing()) {//este é o comando foreach, que esta sendo utilizado
+			faturamento += boing.getPassagens() * boing.getLugares();
 		}
-		double soma1 = 0;
-		for (int aux = 0; aux < this.monomotores.size(); aux++) {
-			soma1 += getMonomotor().iterator().next().getLugares() * getMonomotor().iterator().next().getPassagens();
+		for (Monomotor monomotor : getMonomotor()) {
+			faturamento += monomotor.getPassagens() * monomotor.getLugares();
 		}
-		double soma2 = 0;
-		for (int aux = 0; aux < this.bimotores.size(); aux++) {
-			soma2 += getBimotor().iterator().next().getLugares() * getBimotor().iterator().next().getPassagens();
+		for (Bimotor bimotor : getBimotor()) {
+			faturamento += bimotor.getPassagens() * bimotor.getLugares();
 		}
-		double faturaTotal = soma + soma1 + soma2;
-		return df.format(faturaTotal);
+		return faturamento;
 	}
 
-	public String FaturaTeste() {
-		double soma = 0;
-		double soma1 = 0;
-		double soma2 = 0;
-		double faturaTotal = 0;
-
-		if (boings.size() >= 1) {
-			for (int aux = 0; aux < this.boings.size(); aux++) {
-				soma += getBoing().iterator().next().getLugares() * getBoing().iterator().next().getPassagens();
-			}
-		} else {
-			if (monomotores.size() >= 1) {
-				for (int aux = 0; aux < this.monomotores.size(); aux++) {
-					soma1 += getMonomotor().iterator().next().getLugares()
-							* getMonomotor().iterator().next().getPassagens();
-				}
-			} else {
-				if (bimotores.size() >= 1) {
-					for (int aux = 0; aux < this.bimotores.size(); aux++) {
-						soma2 += getBimotor().iterator().next().getLugares()
-								* getBimotor().iterator().next().getPassagens();
-					}
-
-				}
-			}
-
+	public double Fatura(){
+		double faturamento = 0d;
+		
+		for (Boing boing : getBoing()) {
+			faturamento += boing.getPassagens() * boing.getLugares();
 		}
-		faturaTotal = soma + soma1 + soma2;
-		return df.format(faturaTotal);
+		for (Monomotor monomotor : getMonomotor()) {
+			faturamento += monomotor.getPassagens() * monomotor.getLugares();
+		}
+		for (Bimotor bimotor : getBimotor()) {
+			faturamento += bimotor.getPassagens() * bimotor.getLugares();
+		}
+		return faturamento;
 	}
-
 	public List<Boing> getBoing() {
 		return boings;
 	}

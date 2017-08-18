@@ -18,26 +18,31 @@ public class MegaSena2 {
 		List<Integer> resultado = Arrays.asList(59, 25, 11, 9, 10, 2);
 		
 		
-		int acertos = 0;
-		for(int aux = 0; aux<6; aux++){
-			for(int aux1 = 0; aux1<6; aux1++){
-				if(resultado ){
-					acertos += 1;
-				}		
-			}		
-		}
-		if(acertos == 6){
-			System.out.println("Ganhou a mega sena");
-		
-		}else if(acertos == 5){
-			System.out.println("Ganhou a quina");
-		
-		}else if(acertos == 4){
-			System.out.println("Ganhou a quadra");
-			
-		}else{
-			System.out.println("Tente novamente");
-			
-		}
+		compararAposta(aposta1, resultado);
+		compararAposta(aposta2, resultado);
+		compararAposta(aposta3, resultado);
+		compararAposta(aposta4, resultado);
+		compararAposta(aposta5, resultado);
 	}
-}
+
+	private static void compararAposta(List<Integer> aposta, List<Integer> resultado) {
+		int qtdAcertos = 0;
+		String apostaGanhadora = "";
+		for (Integer apo : aposta) {//este é o comando foreach
+			for (Integer res : resultado) {
+				if (res == apo) {
+					if (qtdAcertos == 0) {
+						apostaGanhadora += apo;
+					} else {
+						apostaGanhadora += ", " + apo;
+					}
+					qtdAcertos++;
+					break;
+				}
+			}
+		}
+		if (qtdAcertos == resultado.size()) {
+			System.out.println("Aposta ganhadora: " + apostaGanhadora);
+		
+	}
+}}
