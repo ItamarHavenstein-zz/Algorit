@@ -8,34 +8,67 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import br.com.itamar.animais.model.Animais;
-import br.com.vinicius.banda.model.Banda;
-
-
+import br.com.itamar.animais.model.Cachorro;
 
 public class CachorroDAO {
-	private final Connection con;
-	
-	public CachorroDAO(Connection con) {
-		this.con = con;
-	}
-	
-	public List<Animais> lista() throws SQLException {
-		List<Banda> bandas = new ArrayList<>();
+	private final Connection conn;
 
-		String sql = "select * from BANDA";
-		try (PreparedStatement stmt = con.prepareStatement(sql)) {
+	public CachorroDAO(Connection con) {
+		this.conn = con;
+	}
+
+	public boolean inserir(Cachorro cachorro) throws SQLException {
+		String sql = "INSERT INTO CACHORRO (COD, NOME, COR, QTD_PERNAS, SOM) VALUES (SEQ_CACHORRO.nextval, ?, ?, ?, ?)";
+
+		PreparedStatement statement = conn.prepareStatement(sql);
+		statement.setString(1, cachorro.getNome());
+		statement.setString(2, cachorro.getCor());
+		statement.setInt(3, cachorro.getQtdPatas());
+		statement.setString(4, cachorro.getSom());
+
+		return statement.executeUpdate() > 0;
+	}
+
+	public boolean alterar(Integer codigo, String nome) throws SQLException {
+		String sql = "UPDATE CACHORRO SET NOME = ? WHERE COD = ?";
+
+		PreparedStatement statement = conn.prepareStatement(sql);
+		statement.setString(1, nome);
+		statement.setInt(2, codigo);
+
+		return statement.executeUpdate() > 0;
+	}
+
+	public boolean excluir(Integer codigo) throws SQLException {
+		String sql = "DELETE CACHORRO WHERE COD = ?";
+
+		PreparedStatement statement = conn.prepareStatement(sql);
+		statement.setInt(1, codigo);
+
+		return statement.executeUpdate() > 0;
+	}
+
+	// serve para listar os dados da tabela onde inserimos as informações sobre
+	// os cachorros
+	public List<Cachorro> lista() throws SQLException {
+		List<Cachorro> lCachorros = new ArrayList<>();
+
+		String sql = "select * from CACHORRO";
+		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.execute();
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
-					int id = rs.getInt("ban_codigo");
-					String nome = rs.getString("ban_nome");
-					Date dtCriacao = rs.getDate("ban_dt_criacao");
-					Banda banda = new Banda(id, nome, dtCriacao, null);
-					bandas.add(banda);
+					int codigo = rs.getInt("COD");
+					String nome = rs.getString("NOME");
+					String cor = rs.getString("COR");
+					int qtdPatas = rs.getInt("QTD_PERNAS");
+					String som = rs.getString("SOM");
+					Cachorro cachorro = new Cachorro(codigo, nome, cor, qtdPatas, som);
+					lCachorros.add(cachorro);
 				}
 			}
 		}
 
-		return bandas;
+		return lCachorros;
+	}
 }

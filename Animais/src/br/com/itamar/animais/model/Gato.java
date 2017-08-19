@@ -1,15 +1,10 @@
 package br.com.itamar.animais.model;
 
-public class Gato extends Animais{
+public class Gato extends Animal {
 
-	public Gato(String nome, String cor, int qtdPatas) {
-		super(nome, cor, qtdPatas, "Miau");
-		
-	}
-	@Override
-	public String Informações() {
-		System.out.println("Gato");
-		return super.Informações();
+	public Gato(Integer codigo, String nome, String cor, Integer qtdPatas, String som) {
+		super(codigo, nome, cor, qtdPatas, som);
+
 	}
 
 }
